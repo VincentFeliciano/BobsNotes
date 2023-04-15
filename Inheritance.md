@@ -29,40 +29,46 @@ Use the keyword extends to declare the derived class
 
 
   // **Example 2**
+
+```java
   public class Employee {...}				// base class
   public class HourlyEmployee extends Employee { ... }  // derived
+```
 
 ### The keyword  super
 
 -   When you create a derived object, the derived class constructor needs to invoke the base class constructor
 -   Do this with the keyword  super  -- in this context, it acts as the call to the base class constructor
-    
-      super();		// invokes base class default constructor
-      super(parameters);    // invokes base class constructor with parameters
-    
-      // Example, for a class called HourlyEmployee, derived from Employee
-      public class HourlyEmployee extends Employee
-      {
-        public HourlyEmployee()	// default constructor
-        {
-    	super();		// invokes Employee() constructor
-        }
-    
-        public HourlyEmployee(double h, double r)
-        {
-    	super(h,r);		// invokes Employee constructor w/ 2 parameters
-        }
-        
-        // ... more methods and data
-    
-      } // end class HourlyEmployee
-    
+
+```java
+super();// invokes base class default constructor
+super(parameters);// invokes base class constructor with parameters
+
+// Example, for a class called HourlyEmployee, derived from Employee
+public class HourlyEmployee extends Employee
+{
+public HourlyEmployee()	// default constructor
+{
+super();// invokes Employee() constructor
+}
+public HourlyEmployee(double h, double r)
+{
+super(h,r);	// invokes Employee constructor w/ 2 parameters
+}
+
+// ... more methods and data
+
+} // end class HourlyEmployee
+```
+
 -   The call to  super()  must be the first line of the derived class constructor
 -   If explicit call to parent constructor not made, the subclass' constructor will  _automatically_  invoke  super(). (the default constructor of the base class, if there is one)
 -   Can also use  super  to invoke a method from the parent class (from inside the derived class). Format:
-    
-      super.method(parameters)
-    
+
+```java
+super.method(parameters)
+```
+
 
   
 
@@ -89,26 +95,31 @@ Although the derived class inherits all the methods from the base class, it is s
 
 -   Suppose a class Rectangle is derived from class Shape.
 -   Shape has a method:
-    
-      void Draw() { ... }  
-    
+
+```java
+void Draw() { ... }  
+```
+
 -   We can define a method in class Rectangle with the same signature. The derived class version will  _override_  the base class version, when called through an object of type Rectangle.
-    
-      Rectangle r = new Rectangle();  // create a Rectangle object
-    				  //  which has all the Shape methods available
-    
-      r.Draw();			  // invokes the Draw method from the
-    				  //  Rectangle class
-    
+
+```java
+Rectangle r = new Rectangle();  
+// create a Rectangle object //  which has all the Shape methods available
+r.Draw();	 
+// invokes the Draw method from the //  Rectangle class
+```
+
 -   Note that the Rectangle class'  Draw()  method can still invoke the superclass' method, with the keyword  super
-    
-      public void Draw()
-      {
-        super.Draw();		// invoke parent's Draw()
-    
-        // continue with any processing specific to Rectangle
-      }
-    
+
+```java
+public void Draw()
+{
+super.Draw();
+// invoke parent's Draw()
+// continue with any processing specific to Rectangle
+}
+```
+
 
 #### In-class Example
 
@@ -128,10 +139,13 @@ Here's a link to the code example we wrote up in class. Base class is Shape, and
       public abstract class Shape
     
 -   Now that  Shape  is abstract, this would be illegal:
-    
-      Shape s = new Shape();        // specifically, it's  **new Shape();**
-                                    //   that is illegal
-    
+
+```java
+Shape s = new Shape(); 
+// specifically, it's  **new Shape();**
+//   that is illegal
+```
+
 
 Methods can be abstract as well:
 
@@ -139,14 +153,16 @@ Methods can be abstract as well:
 -   Abstract methods can  _only_  be created inside abstract classes
 -   The main purpose of an abstract method is to be overridden in derived classes (with the same signature)
 -   Example:
-    
-      public abstract class Shape		// Shape is an abstract class
-      {
-        public abstract double findArea();	// findArea is an abstract method
-    
-        // other methods and data
-      }
-    
+
+```java
+public abstract class Shape		// Shape is an abstract class
+{
+public abstract double findArea();	// findArea is an abstract method
+
+// other methods and data
+}
+```
+
 
 ----------
 
@@ -168,15 +184,17 @@ Let's look at each.
 
 tests whether two objects are equal
 
-  object1.equals(object2)	// returns true if equal, false if not
-				// (object1 and object2 same class type)
+```java
+object1.equals(object2)	// returns true if equal, false if not
+// (object1 and object2 same class type)
 
 Default implementation is:
 
-  public boolean equals(Object obj)
-  {
-	return (this == obj);
-  }
+public boolean equals(Object obj)
+{
+return (this == obj);
+}
+```
 
 Note that this default implementation is equivalent to the == operator, since it only tests the reference variables for equality. The intent is that subclasses of Object should override the equals method whenever they want a test of equality of two objects' **contents**.
 
@@ -190,18 +208,22 @@ returns a string that represents the object. Call format:
 
 The default version of the string might not always be useful, but this can be overridden in any derived class. Example for a class called Fraction:
 
-  public String toString()
-  {
-    return numerator + "/" + denominator;
-  }
+```java
+public String toString()
+{
+return numerator + "/" + denominator;
+}
+```
 
 Assuming the above function for a Fraction class, the following illustrates its usage:
 
-  Fraction f1 = new Fraction(4,5);	// create the fraction 4/5
-  System.out.print(f1.toString());	// will print "4/5"
+```java
+Fraction f1 = new Fraction(4,5);	// create the fraction 4/5
+System.out.print(f1.toString());	// will print "4/5"
 
-  System.out.print(f1);		// also prints "4/5" as this
-				//  always invokes a class' toString method
+System.out.print(f1);		// also prints "4/5" as this
+//  always invokes a class' toString method
+```
 
 ----------
 
@@ -216,7 +238,9 @@ Examples:
 
 Remember, direct assignment between object names will only copy one reference variable to another. Use the clone() method to make copies of objects.
 
+```java
   newObject = someObject.clone();
+```
 
 Not all objects can be cloned. Only objects imeplementing the java.lang.Cloneable interface (which will be discussed later) can use the clone method.
 
@@ -238,35 +262,41 @@ If a piece of code is designed to work with an object of type X, it will also wo
 
 -   Suppose there is a base class called  Shape. Suppose that  Rectangle,  Triangle, and  Circle  are all subclasses of  Shape
 -   Then it is legal to attach derived objects to the base reference variables:
-    
-      Shape s1 = new Circle();
-      Shape s2 = new Rectangle();
-      Shape s3 = new Triangle();
-    
+
+```java
+Shape s1 = new Circle();
+Shape s2 = new Rectangle();
+Shape s3 = new Triangle();
+```
+
 -   Suppose a method  findArea()  is called through one of these variables (s1, s2, s3) in the above example. The method must exist in the Shape class, but there can be override versions in the subclasses. If so, then through dynamic binding, the method that runs will be based on the attached object's type, as a priority over the reference variable type (Shape):
-    
-      s1.findArea();	// runs the findArea() method from the Circle class
-      s2.findArea();	// runs the findArea() method from the Rectangle class
-      s3.findArea();	// runs the findArea() method from the Triangle class
-    
-      // if any of these subclasses did not override the finArea() method, 
-      //  then the Shape class' findArea() method will run
-    
+
+```java
+s1.findArea();	// runs the findArea() method from the Circle class
+s2.findArea();	// runs the findArea() method from the Rectangle class
+s3.findArea();	// runs the findArea() method from the Triangle class
+
+// if any of these subclasses did not override the finArea() method, 
+//  then the Shape class' findArea() method will run
+```
+
 -   If a method expects a parameter of type X, it is legal to pass in an object of a type derived from X in that slot:
-    
-      // Sample method
-      public int draw(Shape s)
-      {   // definition code   }
-    
-      // sample calls
-      Shape s1 = new Shape();
-      Shape s2 = new Circle();
-      Shape s3 = new Rectangle();
-    
-      draw(s1);		// normal usage
-      draw(s2);		// passing in a Circle object
-      draw(s3);		// passing in a Rectangle object
-    
+
+```java
+// Sample method
+public int draw(Shape s)
+{   // definition code   }
+
+// sample calls
+Shape s1 = new Shape();
+Shape s2 = new Circle();
+Shape s3 = new Rectangle();
+
+draw(s1);		// normal usage
+draw(s2);		// passing in a Circle object
+draw(s3);		// passing in a Rectangle object
+```
+
 
 #### Another example
 
@@ -284,8 +314,8 @@ Example: Assume the setup in the previous example, base class  Shape  and derive
   //        of shapes and MANY array elements.  Notice that we are using 
   //        the polymorphism feature
 
-  for (int i = 0; i < list.length; i++)
-     System.out.println("The area of shape # " + i + " = " + list[i].findArea()) 
+for (int i = 0; i < list.length; i++)
+System.out.println("The area of shape # " + i + " = " + list[i].findArea()) 
 
 Note that in this for-loop, the appropriate area methods are called for **each** shape attached to the array, without the need for separate storage for different shape types (i.e. no need for an array of circles, and a separate array of rectangles, etc).
 
