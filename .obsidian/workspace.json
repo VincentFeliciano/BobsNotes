@@ -213,6 +213,24 @@
           }
         ],
         "currentTab": 11
+      },
+      {
+        "id": "6e23e3ef2f8e865a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c14f658a7561bdb6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Basic Building Blocks of Java.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"

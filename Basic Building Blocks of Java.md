@@ -17,7 +17,8 @@
 public static void main(String[] args)
 {
 // statements
-}```
+}
+```
 
 
 ## Java source code files
@@ -32,7 +33,7 @@ The Java compiler imposes some specific rules on the naming of source code files
     -   class names in Java  _are_  case sensitive
     -   Be careful -- in Windows, for example, filenames are not case sensitive, but in Unix, they are
 -   Example: This class goes in the file  Yadda.Java
-    
+
     ```java
      class Yadda
      {
@@ -42,27 +43,27 @@ The Java compiler imposes some specific rules on the naming of source code files
        }
      }
     ```
-    
+
 -   Example: This file must be named  Daffy.java
-    
-    ```java
-     class Bugs
-     {
-       public static void main(String[] args)
-       {
-          System.out.println("What's up, doc?");
-       }
-     }
-    
-     public class Daffy
-     {
-       public static void main(String[] args)
-       {
-          System.out.println("You're dethpicable.");
-       }
-     }
-    ```
-    
+
+```java
+class Bugs
+{
+public static void main(String[] args)
+{
+System.out.println("What's up, doc?");
+}
+}
+
+public class Daffy
+{
+public static void main(String[] args)
+{
+System.out.println("You're dethpicable.");
+}
+}
+```
+
 
 ## Statements
 
@@ -100,14 +101,16 @@ String and character literals can contain special _escape sequences_ that repres
 Comments are used to improve the readability of code. Comments are ignored by the compiler. There are two styles of comments in Java:
 
 -   block style - comment enclosed in a block that starts with  /*  and ends with  */
-    
-        /* This is a comment */ 
-    
+
+/* This is a comment */ 
+
 -   Line style - comment follows the double slash marker  //. Everything after this mark, to the end of the line, is a comment.
-    
-        int x;    // This is a comment 
-        x = 3;    // This is a comment 
-    
+
+```java
+int x;    // This is a comment 
+x = 3;    // This is a comment 
+```
+
 
 ----------
 
@@ -133,51 +136,52 @@ Variables are used to store data. Every Java variable has a:
 ### Style-conventions (for indentifiers)
 
 -   While you can legally pick any name for a variable that follows the  _rules_, it's also a good idea to follow common programming conventions, for easy-to-read code. Here are some conventions used in the Java SDK
-    -   class and interface names start with an uppercase letter
-    -   variable names and method names start with a lowercase letter
-    -   _constants_  are usually in ALL CAPS
-    -   When using names that are made up of multiple words, capitalize the first letter of each word after the first. Example:
-        -   numberOfMathStudents
+-   class and interface names start with an uppercase letter
+-   variable names and method names start with a lowercase letter
+-   _constants_  are usually in ALL CAPS
+-   When using names that are made up of multiple words, capitalize the first letter of each word after the first. Example:
+-   numberOfMathStudents
 -   In addition, it's good to pick mostly meaningful identifiers, so that it's easy to remember what each is for
-    
-      numStudents, firstName                // good
-      a, ns, fn                             // not so good
-    
 
-  
+```java
+numStudents, firstName                // good
+a, ns, fn                             // not so good
+```
+
 
 ## Primitive Data Types
 
 Java has a small set of what are known as _primitives_. These are basic data types that are predefined for the language.
 
 -   **char**  - used for storing single characters (letters, digits, special symbols, etc)
-    -   16 bits, unicode character set.
+-   16 bits, unicode character set.
 -   **boolean**  - has two possible values,  true  or  false
 -   integer types - for storage of integer values
-    -   **byte**  - 8 bits
-    -   **short**  - 16 bits
-    -   **int**  - 32 bits
-    -   **long**  - 64 bits
+-   **byte**  - 8 bits
+-   **short**  - 16 bits
+-   **int**  - 32 bits
+-   **long**  - 64 bits
 -   floating point types - for storage of decimal numbers (i.e. a fractional part after the decimal)
-    -   **float**  - 32 bits
-    -   **double**  - 64 bits
+-   **float**  - 32 bits
+-   **double**  - 64 bits
 
 ## Declaring Variables
 
 -   Inside a block, variables must be declared before they can be used in later statements in the block
 -   Declaration format:  _typeName variableName1, variableName2, ..._;
-    
-     int numStudents;       // variable of type integer
-     double weight;         // variable of type double
-     char letter;           // variable of type character
-     boolean flag;          // variable of type boolean
-     
-     // Examples of multiple variables of the same type in single
-     //  declaration statements
-       
-     int test1, test2, finalExam;
-     double average, gpa;
-    
+
+```java
+int numStudents;       // variable of type integer
+double weight;         // variable of type double
+char letter;           // variable of type character
+boolean flag;          // variable of type boolean
+
+// Examples of multiple variables of the same type in single
+//  declaration statements
+
+int test1, test2, finalExam;
+double average, gpa;
+```
 
   
 
@@ -186,30 +190,36 @@ Java has a small set of what are known as _primitives_. These are basic data typ
 -   To  **declare**  a variable is to tell the compiler it exists, and to reserve memory for it
 -   To  **initialize**  a variable is to load a value into it for the first time
 -   One common way to initialize variables is with an  _assignment statement_. Examples:
-    
-     int numStudents;
-     double weight;
-     char letter;
-    
-     numStudents = 10;
-     weight = 160.35;
-     letter = 'A';
-    
+
+```java
+int numStudents;
+double weight;
+char letter;
+
+numStudents = 10;
+weight = 160.35;
+letter = 'A';
+```
+
 -   Variables of built-in types can be declared and initialized on the same line, as well
-    
-     int numStudents = 10;
-     double weight = 160.35;
-     char letter = 'A';
-    
-     int test1 = 96, test2 = 83, finalExam = 91;
-     double x = 1.2, y = 2.4, z = 12.9;
-    
+
+```java
+int numStudents = 10;
+double weight = 160.35;
+char letter = 'A';
+
+int test1 = 96, test2 = 83, finalExam = 91;
+double x = 1.2, y = 2.4, z = 12.9;
+```
+
 
 ### Constant Variables
 
 (Woohoo! An oxymoron!) A variable can be declared constant by using the keyword final
 
-  final double PI = 3.14159;
+```java
+final double PI = 3.14159;
+```
 
 After this, PI cannot be changed. The following would not work:
 
@@ -222,32 +232,38 @@ After this, PI cannot be changed. The following would not work:
 -   Special built-in symbols that have functionality, and work on  _operands_
 -   **operand**  -- an input to an operator
 -   **Arity**  - how many operands an operator takes
-    -   _unary operator_  -- has one operand
-    -   _binary operator_  -- has two operands
-    -   _ternary operator_  -- has three operands
+-   _unary operator_  -- has one operand
+-   _binary operator_  -- has two operands
+-   _ternary operator_  -- has three operands
 -   Examples:
-    
-      int x, y = 5, z;
-    
-      z = 10;               // assignment operator (binary)
-      x = y + z;            // addition (binary operator)
-      x = -y;               // -y is a unary operation (negation)
-      x++;                  // unary (increment)
-    
+
+```java
+int x, y = 5, z;
+
+z = 10;               // assignment operator (binary)
+x = y + z;            // addition (binary operator)
+x = -y;               // -y is a unary operation (negation)
+x++;                  // unary (increment)
+```
+
 -   **cascading**  - linking of multiple operators, especially of related categories, together in a single statement:
-    
-      x = a + b + c - d + e;        // cascading arithmetic operators
-      x = y = z = 3;                // cascading assignment operators
-    
-    This works because the result of one operation sends back the  _answer_  (i.e. a  _return value_) in its place, to be used in the next piece of the statement. In the above,  (a + b)  happens first, then the answer becomes the first operand in the next + operation.  
-    
+
+```java
+x = a + b + c - d + e;        // cascading arithmetic operators
+x = y = z = 3;                // cascading assignment operators
+```
+
+This works because the result of one operation sends back the  _answer_  (i.e. a  _return value_) in its place, to be used in the next piece of the statement. In the above,  (a + b)  happens first, then the answer becomes the first operand in the next + operation.  
+
 -   **Precedence**  - rules specifying which operators come first in a statement containing multiple operators
-    
-      x = a + b * c;        // b * c happens first, since * has higher
-                            //  precedence than +
-    
+
+```java
+x = a + b * c;        // b * c happens first, since * has higher
+//  precedence than +
+```
+
 -   **Associativity**  - rules specifying which operators are evaluated first when they have the same level of precedence.
-    -   _Most_  (but not all) operators associate from left to right.
+ -   _Most_  (but not all) operators associate from left to right.
 
   
 
@@ -256,12 +272,12 @@ After this, PI cannot be changed. The following would not work:
 ### Assignment Operator
 
 -   Value on the right side (R-value) is assigned to (i.e. stored in) the location (variable) on the left side (L-value)
-    -   **R-value**  -- any expression that evaluates to a single value (name comes from "right" side of assignment operator)
-    -   **L-value**  -- A storage location! (**not**  any old expression). A variable or a reference to a location. (name comes from "left" side of assignment operator
-    -   Typical usage:  
-        
-        _variable_name_ = _expression_
-        
+-   **R-value**  -- any expression that evaluates to a single value (name comes from "right" side of assignment operator)
+-   **L-value**  -- A storage location! (**not**  any old expression). A variable or a reference to a location. (name comes from "left" side of assignment operator
+-   Typical usage:  
+	
+	_variable_name_ = _expression_
+	
 -   The assignment operator returns the L-value (which now stores the new value)
 -   Examples
     
