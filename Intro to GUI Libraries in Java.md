@@ -116,13 +116,17 @@ s3 = "World";
 
 -   Just like we can concatenate strings inside of print calls, we can concatenate strings anywhere -- with literals and with String variables:
 
-``
+```java
+String s4 = s2 + ' ' + s3;	// s4 now stores "Goodbye World"
+```
 
 -   There is also a  static  method in class  String  called  format(). You can use this to  _return_  a string that uses  printf  style formatting. Example:
-    
-      String s5;
-      s5 = String.format("Pi to 3 decimal places = %.3f", Math.PI);
-    
+
+```java
+String s5;
+s5 = String.format("Pi to 3 decimal places = %.3f", Math.PI);
+```
+
 
 ## Using message dialogs
 
@@ -174,55 +178,17 @@ s3 = "World";
       int value = Integer.parseInt(s1);	// converts s1 into an integer  
     
 -   The table below lists the class that goes along with the primitive type, as well as the conversion method
-    
-    Primitive type
-    
-    Corresponding wrapper class
-    
-    static conversion method
-    
-    boolean
-    
-    Boolean
-    
-    boolean parseBoolean(String)
-    
-    byte
-    
-    Byte
-    
-    byte parseByte(String)
-    
-    short
-    
-    Short
-    
-    short parseShort(String)
-    
-    int
-    
-    Integer
-    
-    int parseInt(String)
-    
-    long
-    
-    Long
-    
-    long parseLong(String)
-    
-    float
-    
-    Float
-    
-    float parseFloat(String)
-    
-    double
-    
-    Double
-    
-    double parseDouble(String)
-    
+
+|Primitive type | Corresponding wrapper class |static conversion method|
+|----|-----|------|
+|boolean|Boolean|boolean parseBoolean(String)
+|byte|Byte|byte parseByte(String)
+|short|Short|short parseShort(String)
+|int|Integer|int parseInt(String)
+|long|Long|long parseLong(String)
+|float|Float|float parseFloat(String)
+|double|Double|double parseDouble(String)
+
 -   [Example program showing inputs](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/jop/JOP2.java)
 
 ## Using confirm dialogs

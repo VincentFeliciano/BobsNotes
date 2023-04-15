@@ -16,11 +16,16 @@ Example: Suppose that class Y is _inherited_ from class X.
 Use the keyword extends to declare the derived class
 
   // **Example 1**
+  
+```java
   public class AAA		// AAA is the base class
   { ... }
+```
 
+```java
   public class BBB extends AAA  // BBB is the derived class
   { ... }
+```
 
 
   // **Example 2**

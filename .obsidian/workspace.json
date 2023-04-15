@@ -145,7 +145,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intro to GUI Libraries in Java.md",
+                "file": "Inheritance.md",
                 "mode": "source",
                 "source": false
               }
@@ -213,6 +213,24 @@
           }
         ],
         "currentTab": 11
+      },
+      {
+        "id": "09e5af2e93ffc857",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5dcbbebb3f7a4fe7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inheritance.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -278,7 +296,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Intro to GUI Libraries in Java.md",
+                "file": "Inheritance.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -295,7 +313,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Intro to GUI Libraries in Java.md",
+                "file": "Inheritance.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -318,7 +336,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Intro to GUI Libraries in Java.md"
+                "file": "Inheritance.md"
               }
             }
           }
@@ -339,14 +357,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cefc9a5db355227c",
+  "active": "5dcbbebb3f7a4fe7",
   "lastOpenFiles": [
+    "Intro to GUI Libraries in Java.md",
     "Java Console I O and Code Examples.md",
     "Java Methods.md",
     "Multithreading.md",
     "Javadoc.md",
     "Nested Classes.md",
-    "Intro to GUI Libraries in Java.md",
     "Inheritance.md",
     "I O Foundations and Classes.md",
     "Graphics and painting.md",
