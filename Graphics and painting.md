@@ -68,21 +68,19 @@ So, what can we DO in the paint() or paintComponent() methods? Pretty much anyth
 -   [FontMetrics](http://java.sun.com/javase/6/docs/api/java/awt/FontMetrics.html)  - abstract class. Encapsulates information and properties about the rendering of a font on screen
     -   Helps track more specific font information like height, descent, ascent, and leading (interline spacing)
     -   Graphics  class has a couple of methods named  getFontMetrics():
-        
-           FontMetrics m1, m2;
-           m1 = g.getFontMetrics();	// retrieve info about current drawing font 
-           m2 = g.getFontMetrics(f1);	// retrieve info about font f1
-         
-        
+``
+```java
+FontMetrics m1, m2;
+m1 = g.getFontMetrics();	// retrieve info about current drawing font 
+m2 = g.getFontMetrics(f1);	// retrieve info about font f1
+```
+
+
 -   [Polygon](http://java.sun.com/javase/6/docs/api/java/awt/Polygon.html)  - helper class for representing information about Polygons
     
     -   Stores a list of (x,y) coordinate pairs, representing vertices of a polygon
     -   Several Graphics class methods are for drawing polygons -  drawPolygon(),  drawPolyLine,  fillPolygon. There are versions of these last two that take a Polygon object as a parameter.
-    
-      
-    
 
-----------
 
 ## Java2D
 

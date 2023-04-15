@@ -145,7 +145,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Inheritance.md",
+                "file": "Exceptions.md",
                 "mode": "source",
                 "source": false
               }
@@ -215,16 +215,16 @@
         "currentTab": 11
       },
       {
-        "id": "09e5af2e93ffc857",
+        "id": "145db57e22391900",
         "type": "tabs",
         "children": [
           {
-            "id": "5dcbbebb3f7a4fe7",
+            "id": "6abc6dc44fb9ea87",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Inheritance.md",
+                "file": "Exceptions.md",
                 "mode": "preview",
                 "source": false
               }
@@ -296,7 +296,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Inheritance.md",
+                "file": "Exceptions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -313,7 +313,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Inheritance.md",
+                "file": "Exceptions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -336,7 +336,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Inheritance.md"
+                "file": "Exceptions.md"
               }
             }
           }
@@ -357,18 +357,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5dcbbebb3f7a4fe7",
+  "active": "6abc6dc44fb9ea87",
   "lastOpenFiles": [
+    "Generics.md",
+    "Graphics and painting.md",
+    "I O Foundations and Classes.md",
+    "Inheritance.md",
     "Intro to GUI Libraries in Java.md",
     "Java Console I O and Code Examples.md",
     "Java Methods.md",
     "Multithreading.md",
     "Javadoc.md",
     "Nested Classes.md",
-    "Inheritance.md",
-    "I O Foundations and Classes.md",
-    "Graphics and painting.md",
-    "Generics.md",
     "Classes and Objects.md",
     "Basic Java GUI intro.md",
     "Basic Building Blocks of Java.md",

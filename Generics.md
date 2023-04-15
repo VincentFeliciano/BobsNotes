@@ -53,11 +53,13 @@ Set up by putting a type parameter before the method's return type, and use the 
          
         
     -   **Special case**: Even though type parameters can only take reference types, the following calls are legal due to an added feature since Java 1.5.0, called  **autoboxing**, where primitive types (like  int) can sometimes be auto-converted to objects of the corresponding "type wrapper" class (like  Intetger):
-        
-          int m1 = minimum(6, 9, 10);
-          double m2 = minimum(3.3, 10.5, 1.1);
-         
-        
+
+```java
+int m1 = minimum(6, 9, 10);
+double m2 = minimum(3.3, 10.5, 1.1);
+```
+
+
 -   Questions to ask yourself:
     -   If the compiler translates the generic method into a regular method using the upper bound type, why not write it that way in the first place?
     -   Or more specifically, what's the benefit of the "generic" method (as opposed to just using regular polymorphism, with interface or base class types as parameters and returns)?
@@ -74,11 +76,13 @@ Set up by putting a type parameter before the method's return type, and use the 
     
 -   The type parameter(s) can be used throughout the class, including in generic methods, to represent the element type(s)
 -   The type parameter cannot be used after  new, to create objects or arrays. To create an array, for example, create an array of type  Object  (or whatever the type parameter's upper bound is), and then downcast the reference variable to the generic type:
-    
-     private T[] list;		// array variable, i.e. in a class
-    
-     list = (T[]) new Object[size];	// creation of array of reference variables
-    
+
+```java
+private T[] list;		// array variable, i.e. in a class
+
+list = (T[]) new Object[size];	// creation of array of reference variables
+```
+
 
 #### Using a generic class
 

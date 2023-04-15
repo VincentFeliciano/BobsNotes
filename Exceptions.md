@@ -65,13 +65,15 @@ In a method, to claim an exception, use the keyword throws and list the exceptio
 
 Use the keyword throw, along with the type of exception being thrown. An exception is an object, so it must be created with the new operator. Examples:
 
-  throw new BadHairDayException();
+```java
+throw new BadHairDayException();
 
-  MyException m = new MyException();
-  throw m;
+MyException m = new MyException();
+throw m;
 
-  if (personOnPhone != bubba)
-     throw new Exception("Stranger on the phone!!");
+if (personOnPhone != bubba)
+throw new Exception("Stranger on the phone!!");
+```
 
 Notice that this is different than the keyword throws, which is used in claiming exceptions.
 
@@ -85,6 +87,7 @@ A  **`finally`**  block is  **ALWAYS**  executed no matter how control leaves a 
 
 Example
 
+```java
 try
 {
    lots of IO code opening and reading from/to files
@@ -105,6 +108,7 @@ finally
 {
    make sure to close any files that might be open
 }
+```
   
 
 ## What happens if an exception is not caught?
@@ -121,10 +125,12 @@ Writing code to handle exceptions is tedious and often you have no idea what to 
 Example
 
  catch (Exception e)
- {
-     throw new RuntimeException(e);
- }
-  
+
+```java
+{
+throw new RuntimeException(e);
+}
+```
 
 ## When to use exceptions?
 

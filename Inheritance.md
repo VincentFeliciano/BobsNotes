@@ -314,8 +314,10 @@ Example: Assume the setup in the previous example, base class  Shape  and derive
   //        of shapes and MANY array elements.  Notice that we are using 
   //        the polymorphism feature
 
+```java
 for (int i = 0; i < list.length; i++)
 System.out.println("The area of shape # " + i + " = " + list[i].findArea()) 
+```
 
 Note that in this for-loop, the appropriate area methods are called for **each** shape attached to the array, without the need for separate storage for different shape types (i.e. no need for an array of circles, and a separate array of rectangles, etc).
 
@@ -323,30 +325,36 @@ Note that in this for-loop, the appropriate area methods are called for **each**
 
 Since a derived object can always be attached to a corresponding base class reference variable, this is a type of casting that is implicitly allowed. Similarly, direct assignment between variables (derived type assigned into base type) in this order is also allowed, as are explicit cast operations.
 
-  Shape s1, s2;		// Shape is the base class
-  Circle c;		// Circle is a derived class
+```java
+Shape s1, s2;		// Shape is the base class
+Circle c;		// Circle is a derived class
 
-  s1 = new Circle();	// automatically legal (as seen above)
+s1 = new Circle();	// automatically legal (as seen above)
 
-  s2 = c;		// automatically legal
-  s1 = (Shape)c;	// explicit cast used, but equivalent to above
+s2 = c;		// automatically legal
+s1 = (Shape)c;	// explicit cast used, but equivalent to above
+```
 
 To convert an instance of a superclass (base) to an instance of a subclass (derived), the explicit cast operation must be used:
 
-  c = s1;		// would be illegal -- cast needed
+```java
+c = s1;		// would be illegal -- cast needed
 
-  c = (Circle)s1;	// legal (though not always so useful)
+c = (Circle)s1;	// legal (though not always so useful)
+```
 
 #### The  instanceof  operator
 
 The instanceof operator checks to see if the first operand (a variable) is an instance of the second operand (a class), and returns a response of type boolean.
 
-  Shape s1;
-  Circle c1;
-  // other code.....
+```java
+Shape s1;
+Circle c1;
+// other code.....
 
-  if (s1 instanceof Circle)
-     c1 = (Circle)s1;		// cast to a Circle variable
+if (s1 instanceof Circle)
+c1 = (Circle)s1;		// cast to a Circle variable
+```
 
 ----------
 
@@ -364,11 +372,11 @@ The instanceof operator checks to see if the first operand (a variable) is an in
 Format for declaring an interface:
 
   modifier interface Name
-  {
-    // constant declarations
-    // abstract method signatures - keyword "abstract" not needed
-    //   for these.  ALL methods in an interface are abstract
-  }
+{
+// constant declarations
+// abstract method signatures - keyword "abstract" not needed
+//   for these.  ALL methods in an interface are abstract
+}
 
 Use the keyword implements to state that a class will use a certain interface. In this example, Comparable is the name of an interface. The class ComparableCircle inherits the data from the Comparable interface, and would then need to implement the methods (to be able to use them).
 
@@ -381,15 +389,17 @@ Other rules:
 
 -   Only single inheritance for classes, with  extends
 -   Interfaces can inherit other interfaces (even multiple), with  extends
-    
-        public interface NewInterface extends interface1, ..., interfaceN
-      
-    
+
+```java
+public interface NewInterface extends interface1, ..., interfaceN
+
+
 -   classes can implement more than one interface with  implements
-    
-        public class NewClass extends BaseClass implements interface1, ..., interfaceN
-      
-    
+
+public class NewClass extends BaseClass implements interface1, ..., interfaceN
+```
+
+
 
 #### The  Cloneable  interface
 
