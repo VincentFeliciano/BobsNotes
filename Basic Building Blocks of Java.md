@@ -275,44 +275,52 @@ x = a + b * c;        // b * c happens first, since * has higher
 -   **R-value**  -- any expression that evaluates to a single value (name comes from "right" side of assignment operator)
 -   **L-value**  -- A storage location! (**not**  any old expression). A variable or a reference to a location. (name comes from "left" side of assignment operator
 -   Typical usage:  
-	
-	_variable_name_ = _expression_
-	
+
+```java
+_variable_name_ = _expression_
+```
+
 -   The assignment operator returns the L-value (which now stores the new value)
 -   Examples
-    
-      x = 5;
-      y = 10.3;
-      z = x + y;   // right side can be an expression
-      
-      a + 3 = b;   // ILLEGAL!  Left side must be a storage location
-    
+
+```java
+x = 5;
+y = 10.3;
+z = x + y;   // right side can be an expression
+
+a + 3 = b;   // ILLEGAL!  Left side must be a storage location
+```
+
 -   Associates right-to-left
-    
-      x = y = z = 5;    // z = 5 evaluated first, returns z
-    
+
+```java
+x = y = z = 5;    // z = 5 evaluated first, returns z
+```
+
 -   Use appropriate types when assigning values to variables:
-    
-      int x, y;
-      x = 5843;
-      y = -1234;            // assigning integers to int variables
-    
-      double a, b;
-      a = 12.98;
-      b = -345.8;           // can assign decimal numbers to type double
-    
-      float c, d;
-      c = 12.98f;
-      d = -345.8f;          // put a small 'f' after a literal value to indicate float, instead of double
-     
-      char letter, symb;
-      letter = 'Z';
-      symb = '$';           // can assign character literals to char types
-     
-      boolean flag;
-      flag = true;  
-      flag = false;         // can assign true or false to boolean variables
-    
+
+```java
+int x, y;
+x = 5843;
+y = -1234;            // assigning integers to int variables
+
+double a, b;
+a = 12.98;
+b = -345.8;           // can assign decimal numbers to type double
+
+float c, d;
+c = 12.98f;
+d = -345.8f;          // put a small 'f' after a literal value to indicate float, instead of double
+
+char letter, symb;
+letter = 'Z';
+symb = '$';           // can assign character literals to char types
+
+boolean flag;
+flag = true;  
+flag = false;         // can assign true or false to boolean variables
+```
+
 -   Be careful to not confuse assignment  =  with comparison  ==
 
 ----------
@@ -329,81 +337,92 @@ x = a + b * c;        // b * c happens first, since * has higher
 |Minus |- |unary |-x
 
 -   Division is a special case
-    -   For types  float  and  double, the  /  operator gives the standard decimal answer
-        
-          double x = 19.0, y = 5.0, z;
-          z = x / y;                    // z is now 3.8
-        
-    -   For integer types,  /  gives the quotient, and  %  gives the remainder (as in long division)
-        
-          int x = 19, y = 5, q, r;
-          q = x / y;                    // q is 3
-          r = x % y;                    // r is 4
-        
+-   For types  float  and  double, the  /  operator gives the standard decimal answer
+
+```java
+double x = 19.0, y = 5.0, z;
+z = x / y;    // z is now 3.8
+```
+
+-   For integer types,  /  gives the quotient, and  %  gives the remainder (as in long division)
+
+```java
+int x = 19, y = 5, q, r;
+q = x / y;  // q is 3
+r = x % y;  // r is 4
+```
+
 -   An operation on two operands of the same type returns the same type
 -   An operation on mixed primitive types (if compatible) returns the "larger" type (floating point types are "larger" than integer types, because no data is lost converting from integer to decimal precision)
-    
-      int x = 5;
-      double y = 3.6;
-      z = x + y;            // what does z need to be?  x + y returns a double.
-    
 
-  
+```java
+int x = 5;
+double y = 3.6;
+z = x + y;            // what does z need to be?  x + y returns a double.
+```
+
 
 #### Operator precedence
 
 -   Arithmetic has usual precedence
-    1.  parentheses
-    2.  Unary minus
-    3.  *,  /, and  %
-    4.  +  and  -
-    5.  operators on same level associate left to right
+1.  parentheses
+2.  Unary minus
+3.  *,  /, and  %
+4.  +  and  -
+5.  operators on same level associate left to right
 -   Many different levels of operator precedence
 -   When in doubt, can always use parentheses
 -   Example:
-    
-      z = a - b * -c + d / (e - f);      // 7 operators in this statement
-    
-    What order are they evaluated in?
+
+```java
+z = a - b * -c + d / (e - f);      // 7 operators in this statement
+```
+
+ What order are they evaluated in?
 
   
 
 #### Some short-cut assignment operators (with arithmetic)
 
- 
-  v += e;    means    v = v + e;
-  v -= e;    means    v = v - e;
-  v *= e;    means    v = v * e;
-  v /= e;    means    v = v / e;
-  v %= e;    means    v = v % e;
+ ```java
+v += e;    means    v = v + e;
+v -= e;    means    v = v - e;
+v *= e;    means    v = v * e;
+v /= e;    means    v = v / e;
+v %= e;    means    v = v % e;
+```
 
 ----------
 
 ### Increment and Decrement Operators
 
-  ++x;  // pre-increment (returns reference to new x)
-  x++;  // post-increment (returns value of old x)
-                // shortcuts for x = x + 1
+++x;  // pre-increment (returns reference to new x)
+x++;  // post-increment (returns value of old x)
+// shortcuts for x = x + 1
 
-  --x;  // pre-decrement
-  x--;  // post-decrement
-                // shortcuts for x = x - 1
+--x;  // pre-decrement
+x--;  // post-decrement
+// shortcuts for x = x - 1
 
 -   Pre-increment: incrementing is done  **before**  the value of x is used in the rest of the expression
 -   Post-increment: incrementing is done  **after**  the value of x is used in the rest of the expression
 -   Note - this only matters if the variable is actually used in another expression. These two statements by themselves have the same effect:
-    
-     x++;
-     ++x;
-    
+
+```java
+x++;
+++x;
+```
+
 -   Examples
-    
-      int x = 5, count = 7;
-      result = x * ++count;         // result = 40, count = 8
-    
-      int x = 5, count = 7;
-      result = x * count++;         // result = 35, count = 8
-    
+
+```java
+int x = 5, count = 7;
+result = x * ++count;         // result = 40, count = 8
+
+int x = 5, count = 7;
+result = x * count++;         // result = 35, count = 8
+```
+
 
 ----------
 
@@ -414,18 +433,20 @@ When working with mixed primitive types, conversions can take one of two forms:
 -   Automatic type conversion: when appropriate, the complier will automatically convert a smaller numeric type to a larger one (where the floating point types are always considered "larger" than the integer types).
 -   Explicit cast operations: for all other conversions, the programmer must specify with a cast operation. To cast, put the type in parintheses before the expression whose value you are casting.
 
-  int i1 = 5, i2;
-  short s1 = 3;		
-  double d1 = 23.5, d2;
-  float f1 = 12.3f;
-  byte b1 = 10;
+```java
+int i1 = 5, i2;
+short s1 = 3;		
+double d1 = 23.5, d2;
+float f1 = 12.3f;
+byte b1 = 10;
 
-  d2 = i1;	  // automatically allowed
-  i1 = b1;	  // automatically allowed
-  s1 = (short)i1;  // requires cast operation (some data may be lost)
-  i2 = (int)d1;	  // requires cast operation (decimal data may be lost)
+d2 = i1;	  // automatically allowed
+i1 = b1;	  // automatically allowed
+s1 = (short)i1;  // requires cast operation (some data may be lost)
+i2 = (int)d1;	  // requires cast operation (decimal data may be lost)
 
-  d2 = f1 + d1;	  // automatically allowed
-  i2 = b1 + s1;	  // automatically allowed
+d2 = f1 + d1;	  // automatically allowed
+i2 = b1 + s1;	  // automatically allowed
+```
 
 > Written with [StackEdit](https://stackedit.io/).

@@ -16,8 +16,10 @@ Two steps:
 
 #### Formats for declaring an array variable:
 
-  type[] arrayName;    // preferred
-  type arrayName[];    // alternate form
+```java
+type[] arrayName;    // preferred
+type arrayName[];    // alternate form
+```
 
 #### Format for creating the array (with the operator  new)
 
@@ -25,24 +27,30 @@ Two steps:
 
 Examples:
 
-  int[] list;		   // declare an array variable, "list"
-  list = new int[30];	   // creates an array of 30 integers
+```java
+int[] list;		   // declare an array variable, "list"
+list = new int[30];	   // creates an array of 30 integers
 
-  char[] name;		   // declare array variable, "name"
-  name = new char[20];     // creates an array of 20 chars
+char[] name;		   // declare array variable, "name"
+name = new char[20];     // creates an array of 20 chars
 
-  double[] nums;	   // declare array variable, "nums"
-  nums = new double[x];    // creates an array of x doubles
+double[] nums;	   // declare array variable, "nums"
+nums = new double[x];    // creates an array of x doubles
+```
 
 #### Combined format:
 
-  type[] arrayName = new type[size];
+```java
+type[] arrayName = new type[size];
+```
 
 Examples:
 
-  int[] list = new int[30];
-  char[] name = new char[20];
-  double[] nums = new double[x];
+```java
+int[] list = new int[30];
+char[] name = new char[20];
+double[] nums = new double[x];
+```
 
 The array's size is stored in _arrayName_.length. For example, the size of the "list" array above is:
 
@@ -66,13 +74,18 @@ Once an array is created, the notation arrayName[index] refers to a specific arr
 
 Examples:
 
-  int x;
-  int[] list = new int[5];         // create array 
-  double[] nums = new double[10];  // create array
+```java
+int x;
+int[] list = new int[5];         // create array 
+double[] nums = new double[10];  // create array
+```
 
-  list[3] = 6;                     // assign value 6 to array item with index 3
-  System.out.print(nums[2]);       // output array item with index 2 
-  list[x] = list[x+1];
+
+```java
+list[3] = 6;                     // assign value 6 to array item with index 3
+System.out.print(nums[2]);       // output array item with index 2 
+list[x] = list[x+1];
+```
 
   // set values in list array to {1, 3, 5, 7, 9} 
   for (int i = 0; i < list.length; i++)
