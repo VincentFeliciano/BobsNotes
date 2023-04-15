@@ -12,14 +12,13 @@
     -   In Java,  _all_  functions are methods, meaning they are always contained in some class
 -   A Java program can be made up of multiple classes, spread across multiple code files, and it will typically make use of some SDK libraries as well
 -   **the  main  method**  - Every Java application must have a  main  method, which defines where the program begins. In Java, the  main  method belongs to a class. Any class can have a  main  method. The  main  method looks like this:
-    
-  ```java
-      public static void main(String[] args)
-      {
-        // statements
-      }
-   ```
-    
+
+```java
+public static void main(String[] args)
+{
+// statements
+}```
+
 
 ## Java source code files
 

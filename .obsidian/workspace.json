@@ -145,7 +145,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Control Sructures -  01. Repetition.md",
+                "file": "Basic Building Blocks of Java.md",
                 "mode": "source",
                 "source": false
               }
@@ -213,24 +213,6 @@
           }
         ],
         "currentTab": 11
-      },
-      {
-        "id": "145db57e22391900",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6abc6dc44fb9ea87",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Exceptions.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -296,7 +278,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Control Sructures -  01. Repetition.md",
+                "file": "Basic Building Blocks of Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -313,7 +295,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Control Sructures -  01. Repetition.md",
+                "file": "Basic Building Blocks of Java.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -336,7 +318,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Control Sructures -  01. Repetition.md"
+                "file": "Basic Building Blocks of Java.md"
               }
             }
           }
@@ -359,8 +341,12 @@
   },
   "active": "cefc9a5db355227c",
   "lastOpenFiles": [
-    "Control Structures - 02. Intro, Selection.md",
+    "Basic Java GUI intro.md",
+    "Classes and Objects.md",
+    "Collections.md",
+    "Control Sructures -  01. Repetition.md",
     "Exceptions.md",
+    "Control Structures - 02. Intro, Selection.md",
     "Generics.md",
     "Graphics and painting.md",
     "I O Foundations and Classes.md",
@@ -371,12 +357,8 @@
     "Multithreading.md",
     "Javadoc.md",
     "Nested Classes.md",
-    "Classes and Objects.md",
-    "Basic Java GUI intro.md",
     "Basic Building Blocks of Java.md",
     "Arrays.md",
-    "Collections.md",
-    "Control Sructures -  01. Repetition.md",
     "README.md",
     "Untitled",
     "-README.md",

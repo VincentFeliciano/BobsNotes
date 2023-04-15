@@ -127,6 +127,7 @@ statement(s)
 
 -   As usual, the loop body is a block of statements, or if just a single statement, the block can be omitted. An alternate way to write the format might be:
 
+```java
 **for (_initialCondition_; _boolean_Expression_; _iterativeStatement_) 
 {
 statement1;
@@ -135,6 +136,7 @@ statement2;
 
 statementN;
 }** 
+```
 
 -   How it works
     -   The  _initialCondition_  runs once, at the start of the loop
@@ -148,38 +150,43 @@ statementN;
 ### Examples of  for  loops
 
 -   Recall this  while  loop example, which adds the numbers from 1 to 50:
-    
-     int i = 1, sum = 0; 
-     while (i <= 50) 
-     { 
-        sum += i; 
-        i++; 
-     } 
-    
-     System.out.println("Sum of numbers from 1 through 50 is " + sum); 
-    
-    Here's a  for  loop that does the same job:
-    
-     // **for loop example** 
-     // loop body runs 50 times, condition checked 51 times 
-     int i, sum = 0; 
-     for (i = 1; i <= 50; i++) 
-     { 
-        sum += i; 
-     } 
-    
-     System.out.println("Sum of numbers from 1 through 50 is " + sum); 
-    
+
+```java
+int i = 1, sum = 0; 
+while (i <= 50) 
+{ 
+sum += i; 
+i++; 
+} ```
+
+System.out.println("Sum of numbers from 1 through 50 is " + sum); 
+
+Here's a  for  loop that does the same job:
+
+```java
+// **for loop example** 
+// loop body runs 50 times, condition checked 51 times 
+int i, sum = 0; 
+for (i = 1; i <= 50; i++) 
+{ 
+sum += i; 
+} 
+ System.out.println("Sum of numbers from 1 through 50 is " + sum); 
+```
+
+
 -   This loop prints out the word "Hello" 10 times:
-    
-      for (int i = 0; i < 10; i++)
-        System.out.println("Hello");
-    
-    So does this one
-    
-      for (int i = 1; i <= 10; i++)
-        System.out.println("Hello");
-    
+
+```java
+for (int i = 0; i < 10; i++)
+System.out.println("Hello");
+
+So does this one
+
+for (int i = 1; i <= 10; i++)
+System.out.println("Hello");
+```
+
 -   A few common types of algorithms using for-loops:
     -   [A counting algorithm](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/control/for/Counting.java)
     -   [A summing algorithm](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/control/for/Summing.java)  -- Adding up something with a loop
@@ -194,32 +201,38 @@ statementN;
 ### Special notes about for loops:
 
 1.  It should be noted that if the control variable is declared inside the for header, it only has scope through the for loop's execution. Once the loop is finished, the variable is out of scope:
-    
-        for (int counter = 0; counter < 10; counter++) 
-        {
-           // loop body    
-        } 
-    
-        System.out.println(counter);   // illegal.  counter out of scope
-    
-    This can be avoided by declaring the control variable before the loop itself.
-    
-        int counter;    // declaration of control variable 
-    
-        for (counter = 0; counter < 10; counter++) 
-        {
-           // loop body    
-        } 
-    
-        System.out.println(counter);   // OK.  counter is in scope
-    
-2.  For loops also do not have to count one-by-one, or even upward. Examples:
-    
-        for (i = 100; i > 0; i--)
-    
-        for (c = 3; c <= 30; c+=4)
-    
-    The first example gives a loop header that starts counting at 100 and decrements its control variable, counting down to 1 (and quitting when i reaches 0). The second example shows a loop that begins counting at 3 and counts by 4's (the second value of c will be 7, etc).
+
+```java
+for (int counter = 0; counter < 10; counter++) 
+{
+// loop body    
+} 
+
+System.out.println(counter);   // illegal.  counter out of scope
+```
+
+This can be avoided by declaring the control variable before the loop itself.
+
+```java
+int counter;    // declaration of control variable 
+
+for (counter = 0; counter < 10; counter++) 
+{
+// loop body    
+} 
+```
+
+System.out.println(counter);   // OK.  counter is in scope
+
+1.  For loops also do not have to count one-by-one, or even upward. Examples:
+
+```java
+for (i = 100; i > 0; i--)
+
+for (c = 3; c <= 30; c+=4)
+```
+
+The first example gives a loop header that starts counting at 100 and decrements its control variable, counting down to 1 (and quitting when i reaches 0). The second example shows a loop that begins counting at 3 and counts by 4's (the second value of c will be 7, etc).
 
 ----------
 

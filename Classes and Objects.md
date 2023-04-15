@@ -32,17 +32,21 @@ Objects are created from a class by using the new operator, and they must be att
 
 Examples:
 
-  Circle myCircle;		// where Circle is a class
-  myCircle = new Circle();
+```java
+Circle myCircle;		// where Circle is a class
+myCircle = new Circle();
 
-  Dog fido = new Dog();		// where Dog is a class
+Dog fido = new Dog();		// where Dog is a class
+```
 
 **Caution:** Since the name used to refer to an object is a _reference variable_, and not the object itself, it is important to note that any assignments done on such a variable are just on the reference. For example, if we create two objects, and then assign their variables together:
 
-  Circle c1 = new Circle();
-  Circle c2 = new Circle();
+```java
+Circle c1 = new Circle();
+Circle c2 = new Circle();
 
-  c1 = c2;
+c1 = c2;
+```
 
 ... the last statement (c1 = c2) does **not** copy circle c2 into c1. Instead, it copies the reference varaible c2 to c1, which means that both reference variables are now referring to the **same object** (the second one, c2).
 
@@ -50,16 +54,19 @@ Examples:
 
 Once an object is created, access the object's internal methods and data with the dot-operator. Format:
 
-  objectReference.data
-  objectReference.method(arguments)   // a call to a method
+```java
+objectReference.data
+objectReference.method(arguments)   // a call to a method
+```
 
 Example:
 
-  Circle c1 = new Circle();
-  c1.radius = 10;		// access radius instance variable
-
-  // compute and print the area with the findArea method
-  System.out.print("Area = " + c1.findArea());
+```java
+Circle c1 = new Circle();
+c1.radius = 10;		// access radius instance variable
+// compute and print the area with the findArea method
+System.out.print("Area = " + c1.findArea());
+```
 
 ## Protection levels in a class (Visibility Modifiers)
 
@@ -92,8 +99,10 @@ Constructors can have parameters. A constructor without any parameters is known 
 
 A constructor is automatically invoked when an object is created with  new.
 
-  c1 = new Circle();    // invokes default constructor
-  c2 = new Circle(9.0)  // invokes a constructor with one parameter
+```java
+c1 = new Circle();    // invokes default constructor
+c2 = new Circle(9.0)  // invokes a constructor with one parameter
+```
 
 The usual purpose of a constructor is to perform any initializations on the object when it is created (i.e. primarily the instance variables)
 
@@ -141,29 +150,31 @@ To make a class variable constant, add the keyword final as a modifier on the de
 
 #### Example
 
- class Student
- {
-   private int testGrade;		// instance variable (non-static)
-   private static int numStudents = 0;	// static variable (class variable)
-   private final static int pointsPossible = 100;       // class constant
+```java
+class Student
+{
+private int testGrade;		// instance variable (non-static)
+private static int numStudents = 0;	// static variable (class variable)
+private final static int pointsPossible = 100;       // class constant
 
-   public Student()
-   {   testGrade = 0;   }
+public Student()
+{   testGrade = 0;   }
 
-   public void setGrade(int gr)
-   {   testGrade = gr;  }
+public void setGrade(int gr)
+{   testGrade = gr;  }
 
-   public int getGrade()
-   {   return testGrade;  }
+public int getGrade()
+{   return testGrade;  }
 
-   public static void incrementNumStudents()
-   {   numStudents++;   }
+public static void incrementNumStudents()
+{   numStudents++;   }
 
-   public static int getNumStudents()
-   {   return numStudents;  }  
+public static int getNumStudents()
+{   return numStudents;  }  
 
- }
+}
 
+```
 In this sample code:
 
 -   testGrade  is an intance variable. Each object of type  Student  will have its own copy of  testGrade
@@ -178,17 +189,18 @@ In this sample code:
 
 -   In Java, the keyword  this  is a  _reference varibable_  to the current  _calling object_  (from inside an instance method). Once inside the instance method,  this  acts as the reference name for the calling object that you are in.
 -   In Java,  this  can also be used to call one constructor from another in a class, for the current calling object. Use it like the function name in the call. Example:
-    
-      public Date(int m, int d, int y)      // constructor with 3 params
-      {
-         month = m;     day = d;     year = y;
-      }
-    
-      public Date(int m, int d)             // constructor with 2 params
-      {
-         this(m, d, 0);                     // calls constructor with 3 params
-      }  
-    
+
+```java
+public Date(int m, int d, int y)      // constructor with 3 params
+{
+ month = m;     day = d;     year = y;
+}
+
+public Date(int m, int d)             // constructor with 2 params
+{
+ this(m, d, 0);                     // calls constructor with 3 params
+}  
+```
 
 ## Fraction class example
 
@@ -203,22 +215,28 @@ Here is a small class example -- it is a type for implementing Fraction objects.
 Creating an array of objects is a little trickier than an array of a primitive type.
 
 1.  Create an array using similar syntax to primitive types, but use the class name instead of the primitive type name:
-    
-      Student[] list = new Student[10];
-    
-    This only creates an array of reference variables -- references for type  Student  
-    
-2.  Create the individual objects with  new, and attach to the reference variables (the array positions). This can be done separately:
-    
-      list[0] = new Student();
-      list[1] = new Student();
-    
-    but it's easier with a loop (as long as you are using the same constructor for each object):
-    
-      for (int i = 0; i < list.length; i++)
-        list[i] = new Student();
-    
-    Each  list[i]  is the reference to an object now.
+
+```java
+Student[] list = new Student[10];
+```
+
+This only creates an array of reference variables -- references for type  Student  
+
+1.  Create the individual objects with  new, and attach to the reference variables (the array positions). This can be done separately:
+
+```java
+list[0] = new Student();
+list[1] = new Student();
+```
+
+but it's easier with a loop (as long as you are using the same constructor for each object):
+
+```java
+for (int i = 0; i < list.length; i++)
+list[i] = new Student();
+```
+
+Each  list[i]  is the reference to an object now.
 
 ----------
 
