@@ -32,7 +32,7 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
 -   The  _user_  of a method is the  **caller**.
 -   Use a method by making calls to the method with real data, and getting back real answers.
 -   Consider a typical function from mathematics:
-    
+
       f(x) = 2x + 5
     
     In mathematics, the symbol 'x' is a placeholder, and when you run the function for a value, you "plug in" the value in place of x. Consider the following equation, which we then simplify:
@@ -126,20 +126,22 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
 #### Method Examples
 
 -   Here are two simple methods that do a math calculation and return a result
-    
-      public static int sum(int x, int y, int z)
-      // add the three parameters together and return the result
-      {
-         int answer;
-         answer = x + y + z;
-         return answer;
-      }
-     
-      public static double average (double a, double b, double c)
-      // add the parameters, divide by 3, and return the result
-      {
-         return (a + b + c) / 3.0;
-      }
+
+ ```java
+  public static int sum(int x, int y, int z)
+  // add the three parameters together and return the result
+  {
+	 int answer;
+	 answer = x + y + z;
+	 return answer;
+  }
+ 
+  public static double average (double a, double b, double c)
+  // add the parameters, divide by 3, and return the result
+  {
+	 return (a + b + c) / 3.0;
+  }
+```
     
 -   More than one return statement may appear in a function definition, but the first one to execute will force immediate exit from the function.
     

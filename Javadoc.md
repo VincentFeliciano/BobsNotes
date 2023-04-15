@@ -2,7 +2,10 @@
 
 Javadoc is a nice tool for building web page documentation for your classes. Resulting web pages look like the ones you see in the Java API pages on the Sun web site. Comments need to be in a specific format. Javadoc comments are contained in block comments with these opening and closing markers:
 
+```java
   /**      */
+```
+
 
 Javadoc comments are written in html, and there are specific Javadoc tags to use for certain items (like method parameters and returns).
 

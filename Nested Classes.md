@@ -196,7 +196,6 @@ If a declaration of a type (such as a member variable or a parameter name) in a 
 public class ShadowTest {
 
 ```java
-```
     public int x = 0;
 
     class FirstLevel {
@@ -216,6 +215,8 @@ public class ShadowTest {
         fl.methodInFirstLevel(23);
     }
 }
+```
+
 
 The following is the output of this example:
 
@@ -225,11 +226,17 @@ ShadowTest.this.x = 0
 
 This example defines three variables named  `x`: the member variable of the class  `ShadowTest`, the member variable of the inner class  `FirstLevel`, and the parameter in the method  `methodInFirstLevel`. The variable  `x`  defined as a parameter of the method  `methodInFirstLevel`  shadows the variable of the inner class  `FirstLevel`. Consequently, when you use the variable  `x`  in the method  `methodInFirstLevel`, it refers to the method parameter. To refer to the member variable of the inner class  `FirstLevel`, use the keyword  `this`  to represent the enclosing scope:
 
+```java
 System.out.println("this.x = " + this.x);
+```
+
 
 Refer to member variables that enclose larger scopes by the class name to which they belong. For example, the following statement accesses the member variable of the class  `ShadowTest`  from the method  `methodInFirstLevel`:
 
+```java
 System.out.println("ShadowTest.this.x = " + ShadowTest.this.x);
+```
+
 
 ## Serialization
 
