@@ -1,4 +1,4 @@
-
+# Classes and Objects
 
 **Object** -- an encapsulation of data along with functions that act upon that data. (Attempts to mirror the real world, where objects have attributes and are associated with activities).
 A
