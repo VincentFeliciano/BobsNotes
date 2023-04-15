@@ -15,44 +15,52 @@
 ## while  and  do-while  loops
 
 -   Format of  while  loop:
-    
-     **while (_boolean_expression_)
-    {
-      statement(s)
-    }** 
-    
+
+```java
+**while (_boolean_expression_)
+{
+statement(s)
+}** 
+
 -   Format of  do/while  loop:
-    
-     **do
-    {
-      statement(s)
-    }
-    while (_boolean_expression_);** 
-    
+
+**do
+{
+statement(s)
+}
+while (_boolean_expression_);** 
+```
+
 -   The  _boolean_expression_  in these formats is sometimes known as the  **loop continuation condition**
 -   The loop body must be a block, or a single statement (like with the  if-statements)
 -   We could also write the formats as follows (illustrating more visually what they look like when a compound statement makes up the loop "body"):
-    
-     // while loop format
-     while (_boolean_expression_) 
-     {
-        statement1;
-        statement2;
-        // ...
-    
-        statementN;
-     } 
-    
-     // do-while loop format
-     do
-     {
-        statement1;
-        statement2;
-        // ...
-    
-        statementN;
-     } while (_boolean_expression_);
-    
+
+// while loop format
+
+```java
+while (_boolean_expression_) 
+{
+statement1;
+statement2;
+// ...
+
+statementN;
+} 
+```
+
+// do-while loop format
+
+```java
+do
+{
+statement1;
+statement2;
+// ...
+
+statementN;
+} while (_boolean_expression_);
+```
+
 -   **HOW THEY WORK**
     -   The boolean expression is a test condition that is evaluated to decide whether the loop should repeat or not.
         -   **true**  means run the loop body again.
@@ -69,24 +77,30 @@ Both of the following loops add up all of the numbers between 1 and 50.
 
  // **while loop example** 
  // loop body runs 50 times, condition checked 51 times 
+
+```java
  int i = 1, sum = 0; 
  while (i <= 50) 
  { 
     sum += i;		// means:  sum = sum + i; 
     i++; 		// means:  i = i + 1;
  } 
+```
 
  System.out.println("Sum of numbers from 1 through 50 is " + sum); 
   
 
  // **do/while loop example** 
  // loop body runs 50 times, condition checked 50 times 
+
+```java
  int i = 1, sum = 0; 
  do 
  { 
     sum += i;		// means:  sum = sum + i; 
     i++; 		// means:  i = i + 1;
  } while (i <= 50); 
+```
 
  System.out.println("Sum of numbers from 1 through 50 is " + sum); 
 
@@ -103,23 +117,25 @@ Both of the following loops add up all of the numbers between 1 and 50.
 
 -   The  **for**  loop is most convenient with  _counting loops_  -- i.e. loops that are based on a counting variable, usually a known number of iterations
 -   Format of  for  loop:
-    
-     **for (_initialCondition_; _boolean_Expression_; _iterativeStatement_) 
-     {   
-       statement(s)
-     }** 
-    
+
+```java
+**for (_initialCondition_; _boolean_Expression_; _iterativeStatement_) 
+{   
+statement(s)
+}** 
+```
+
 -   As usual, the loop body is a block of statements, or if just a single statement, the block can be omitted. An alternate way to write the format might be:
-    
-     **for (_initialCondition_; _boolean_Expression_; _iterativeStatement_) 
-     {
-        statement1;
-        statement2;
-        // ...
-    
-        statementN;
-     }** 
-    
+
+**for (_initialCondition_; _boolean_Expression_; _iterativeStatement_) 
+{
+statement1;
+statement2;
+// ...
+
+statementN;
+}** 
+
 -   How it works
     -   The  _initialCondition_  runs once, at the start of the loop
     -   The  _boolean_Expression_  is checked. (This is just like the expression in a  while  loop). If it's false, quit. If it's true, then:

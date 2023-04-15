@@ -145,7 +145,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Exceptions.md",
+                "file": "Control Sructures -  01. Repetition.md",
                 "mode": "source",
                 "source": false
               }
@@ -296,7 +296,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Exceptions.md",
+                "file": "Control Sructures -  01. Repetition.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -313,7 +313,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Exceptions.md",
+                "file": "Control Sructures -  01. Repetition.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -336,7 +336,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Exceptions.md"
+                "file": "Control Sructures -  01. Repetition.md"
               }
             }
           }
@@ -357,8 +357,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6abc6dc44fb9ea87",
+  "active": "cefc9a5db355227c",
   "lastOpenFiles": [
+    "Control Structures - 02. Intro, Selection.md",
+    "Exceptions.md",
     "Generics.md",
     "Graphics and painting.md",
     "I O Foundations and Classes.md",
@@ -375,8 +377,6 @@
     "Arrays.md",
     "Collections.md",
     "Control Sructures -  01. Repetition.md",
-    "Control Structures - 02. Intro, Selection.md",
-    "Exceptions.md",
     "README.md",
     "Untitled",
     "-README.md",
