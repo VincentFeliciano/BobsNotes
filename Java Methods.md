@@ -84,14 +84,18 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
 -   There is a special use of the keyword  static  for use in  import  statements
 -   On an  import  statement, a programmer can import the static methods of a class, so that the class name and dot-operator does not have to be used in subsequent calls in the file
 -   For example, suppose we do this statement in our file:
-    
-      import static java.lang.Math.sqrt;
-    
+
+```java
+import static java.lang.Math.sqrt;
+```
+
 -   The above would mean that  _anywhere_  in the file we call the  sqrt  method, it's specifically the one from the Math class. In this case, we would not need to use the  Math.  syntax before each call
 -   To import  _all_  static methods from a class this way, use the * wildcard character. Example:
-    
-      import static java.lang.Math.*;	// import all static methods from Math
-    
+
+```java
+import static java.lang.Math.*;	// import all static methods from Math
+```
+
 -   It's best to use this sparingly. If a code file is using mulitple libraries, it can get confusing what class different method calls are coming from, especially if mulitple classes have similarly named methods
 -   [The sqrt() example, with static import](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/methods/Sqrt2.java)
 
@@ -101,12 +105,14 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
 
 -   The  **builder**  of a method (a programmer) is responsible for the  **prototype**  (or  _signature_) of a method, as well as the  **definition**  (i.e. how it works).
 -   The structure of a method:
-    
-      modifier(s) returnType methodName(parameter list)      // this is the _signature_
-      {
-        // method body (i.e. what it does, how it works) -- the definition
-      }
-    
+
+```java
+modifier(s) returnType methodName(parameter list)      // this is the _signature_
+{
+// method body (i.e. what it does, how it works) -- the definition
+}
+```
+
 -   **The pieces**
 
 -   **methodName**  - identifier chosen by the builder
@@ -142,26 +148,30 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
 	 return (a + b + c) / 3.0;
   }
 ```
-    
+
 -   More than one return statement may appear in a function definition, but the first one to execute will force immediate exit from the function.
-    
-      boolean InOrder(int x, int y, int z)
-      // answers yes/no to the question "are these parameters in order,
-      //  smallest to largest?"  Returns true for yes, false for no.
-      {
-         if (x <= y && y <= z)
-    	return true;
-         else
-    	return false;
-      }
-    
+
+```java
+  boolean InOrder(int x, int y, int z)
+  // answers yes/no to the question "are these parameters in order,
+  //  smallest to largest?"  Returns true for yes, false for no.
+  {
+	 if (x <= y && y <= z)
+	return true;
+	 else
+	return false;
+  }
+```
+
 -   [Sample code using the functions above](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/methods/Methods1.java)
 -   Examples of  **ILLEGAL**  method syntax (common mistakes to watch out for):
-    
-      double average(double x, y, z)  {  }    // Each parameter must list a type 
-      printData(int x)                {  }    // missing return type 
-      int double Task(int x)          {  }	  // only one return type allowed!
-    
+
+```java
+double average(double x, y, z)  {  }    // Each parameter must list a type 
+printData(int x)                {  }    // missing return type 
+int double Task(int x)          {  }	  // only one return type allowed!
+```
+
 
 ## Scope of Identifiers
 
@@ -189,11 +199,14 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
     -   A  void  method can still use the keyword  return  inside, but not with an expression (only by itself). One might do this to force early exit from a method.
     -   To CALL a  void  method, call it by itself -- do NOT put it in the middle of any other statement or expression
 -   Sample prototypes:
-    
-      char getALetter()				// no parameters
-      void printQuotient(int x, int y)		// void return type
-      void killSomeTime()				// both
-    
+
+```java
+char getALetter()				// no parameters
+void printQuotient(int x, int y)		// void return type
+void killSomeTime()				// both
+
+```
+
 -   [Code example with definitions and calls for these methods](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/methods/Voids.java)
 -   [Here's an interesting void function](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/methods/Twice.java)  -- see if you can figure out what it does. (It will illustrate an important thing about passing parameters).
 
@@ -221,32 +234,40 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
 #### Example
 
 -   Method:
-    
-      static int myMethod(int x, int y)
-      {
-        x = x * 2;
-        System.out.println("x = " + x);
-        y = y * 2;
-        System.out.println("y = " + y);
-        return x + y;
-      }
-    
+
+```java
+  static int myMethod(int x, int y)
+  {
+	x = x * 2;
+	System.out.println("x = " + x);
+	y = y * 2;
+	System.out.println("y = " + y);
+	return x + y;
+  }
+```
+
 -   Sample call:
-    
-      int a = 5, b = 8, ans;
-      ans = myMethod(a, b);
-      System.out.println("ans = " + ans);
-      System.out.println("a = " + a);
-      System.out.println("b = " + b);
-    
+
+```java
+int a = 5, b = 8, ans;
+ans = myMethod(a, b);
+System.out.println("ans = " + ans);
+System.out.println("a = " + a);
+System.out.println("b = " + b);
+```
+
 -   Notice that the output of the code is:
-    
-      x = 10
-      y = 16
-      ans = 26
-      a = 5
-      b = 8
-    
+
+```java
+x = 10
+y = 16
+ans = 26
+a = 5
+b = 8
+
+```
+
+
 -   [Try this code yourself, here](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/methods/ByValue.java)
 
 ----------
@@ -255,26 +276,34 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
 
 -   The term  **method overloading**  refers to the fact that it is perfectly legal to have more than one method in the same class  **with the same name**, as long as they have different parameter lists. The difference can be in the number of parameters, or in the types of parameters.
 -   Example:
-    
-       int process(double num)  {  }	        // method 1
-       int process(char letter) {  }                // method 2
-       int process(double num, int position)  { }   // method 3
-    
+
+```java
+int process(double num)  {  }	        // method 1
+int process(char letter) {  }                // method 2
+int process(double num, int position)  { }   // method 3
+```
+
 -   Notice that although all three methods above have the same exact name, they each have a different parameter list. Some of them differ in the number of parameters (2 parameters vs. 1 parameter), and the first two differ in types (double vs. char). The compiler will distinguish which function to invoke based on what is actually passed in when the function is called.
-    
-       x = process(3.45, 12);	// invokes the third function above
-       x = process('f');		// invokes the second function
-    
+
+```java
+x = process(3.45, 12);	// invokes the third function above
+x = process('f');		// invokes the second function
+```
+
 -   [These methods in a code example](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/methods/Over1.java)
 
 #### Ambiguous Invocation
 
 -   Because of method overloading and the legality of some automatic type conversions, it is possible to make a call that could match two methods (due to the type conversion issue). This will result in a compiler error.
 -   Example:
-    
-      double sum(int x, double y);
-      double sum(double x, int y);
-    
+
+```java
+double sum(int x, double y);
+double sum(double x, int y);
+```
+
 -   This pair of methods is legal, since the parameter lists differ. But the following is an illegal call, due to ambiguous invocation:
-    
-      System.out.print("The sum is " + sum(3, 4));
+
+```java
+System.out.print("The sum is " + sum(3, 4));
+```
