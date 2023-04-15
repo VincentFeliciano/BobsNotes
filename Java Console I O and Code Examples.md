@@ -48,35 +48,40 @@
     -   %f  specifies a floating point type
 -   Consider the format symbols to be "fill-in-the-blanks" spots in the format string. These are filled in with the list of parameters
 -   Example:
-    
-      int numStudents = 25;
-      char letterGrade = 'A';
-      double gpa = 3.95;
-    
-      System.out.printf("There are %d students\n", numStudents);
-      System.out.printf("Bobby's course grade was %c, and his GPA is %f\n", 
-                        letterGrade, gpa);
-    
-      // The output from this example is:
-      //   There are 25 students
-      //   Bobby's course grade was A, and his GPA is 3.950000
-    
+
+```java
+int numStudents = 25;
+char letterGrade = 'A';
+double gpa = 3.95;
+
+System.out.printf("There are %d students\n", numStudents);
+System.out.printf("Bobby's course grade was %c, and his GPA is %f\n", letterGrade, gpa);
+
+// The output from this example is:
+//  There are 25 students
+//  Bobby's course grade was A, and his GPA is 3.950000
+```
+
 -   To specify how many decimal places for the output of a floating point value, modify the  %f  symbol in this format:
-    
-      %**.N**f  // where N is the number of decimal places to print
-    
+
+```java
+%**.N**f  // where N is the number of decimal places to print
+```
+
 -   Example:
-    
-      double gpa = 3.275;
-      double PI = 3.1415;
-    
-      System.out.printf("gpa = %.2f", gpa);
-      System.out.printf("PI = %.3f", PI);
-    
-      // Output is:
-      //    gpa = 3.28
-      //    PI = 3.142
-    
+
+```java
+double gpa = 3.275;
+double PI = 3.1415;
+
+System.out.printf("gpa = %.2f", gpa);
+System.out.printf("PI = %.3f", PI);
+
+// Output is:
+//    gpa = 3.28
+//    PI = 3.142
+```
+
 
 ----------
 
@@ -93,18 +98,20 @@
     2.  Create a  Scanner  object
     3.  Pass in  System.in  into the  Scanner  constructor, when creating the object
 -   Example:
-    
-      import java.util.Scanner;
-      // yadda yadda
-    
-      Scanner input = new Scanner(System.in);
-    
-      // now we can use the object to read data from the keyboard.
-      // Some sample calls:
-      int x = input.nextInt();
-      double y = input.nextDouble();
-      String s = input.next();
-    
+
+```java
+import java.util.Scanner;
+// yadda yadda
+
+Scanner input = new Scanner(System.in);
+
+// now we can use the object to read data from the keyboard.
+// Some sample calls:
+int x = input.nextInt();
+double y = input.nextDouble();
+String s = input.next();
+```
+
 
 ### Examples:
 

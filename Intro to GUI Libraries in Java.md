@@ -106,16 +106,18 @@ These are just a few examples, not a comprehensive list.
 ## A few simple things about Strings
 
 -   You can assign a string literal to a variable of type  String:
-    
-      String s1, s2, s3;
-      s1 = "Hello World";
-      s2 = "Goodbye";
-      s3 = "World";
-    
+
+```java
+String s1, s2, s3;
+s1 = "Hello World";
+s2 = "Goodbye";
+s3 = "World";
+```
+
 -   Just like we can concatenate strings inside of print calls, we can concatenate strings anywhere -- with literals and with String variables:
-    
-      String s4 = s2 + ' ' + s3;	// s4 now stores "Goodbye World"
-    
+
+``
+
 -   There is also a  static  method in class  String  called  format(). You can use this to  _return_  a string that uses  printf  style formatting. Example:
     
       String s5;

@@ -145,7 +145,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java Methods.md",
+                "file": "Intro to GUI Libraries in Java.md",
                 "mode": "source",
                 "source": false
               }
@@ -278,7 +278,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java Methods.md",
+                "file": "Intro to GUI Libraries in Java.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -295,7 +295,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java Methods.md",
+                "file": "Intro to GUI Libraries in Java.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -318,7 +318,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java Methods.md"
+                "file": "Intro to GUI Libraries in Java.md"
               }
             }
           }
@@ -341,11 +341,11 @@
   },
   "active": "cefc9a5db355227c",
   "lastOpenFiles": [
+    "Java Console I O and Code Examples.md",
+    "Java Methods.md",
     "Multithreading.md",
     "Javadoc.md",
-    "Java Methods.md",
     "Nested Classes.md",
-    "Java Console I O and Code Examples.md",
     "Intro to GUI Libraries in Java.md",
     "Inheritance.md",
     "I O Foundations and Classes.md",

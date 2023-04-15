@@ -33,15 +33,19 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
 -   Use a method by making calls to the method with real data, and getting back real answers.
 -   Consider a typical function from mathematics:
 
-      f(x) = 2x + 5
-    
-    In mathematics, the symbol 'x' is a placeholder, and when you run the function for a value, you "plug in" the value in place of x. Consider the following equation, which we then simplify:
-    
-      y = f(10)		// must evaluate f(10)
-      y = 2 * 10 + 5	// plug in 10 for x
-      y = 20 + 5
-      y = 25		// so f(10) gives the answer 25
-    
+  ```java
+  f(x) = 2x + 5
+```
+
+In mathematics, the symbol 'x' is a placeholder, and when you run the function for a value, you "plug in" the value in place of x. Consider the following equation, which we then simplify:
+
+ ```java
+  y = f(10)		// must evaluate f(10)
+  y = 2 * 10 + 5	// plug in 10 for x
+  y = 20 + 5
+  y = 25		// so f(10) gives the answer 25
+```
+
     In programming, we would say that the call  f(10)  **returns**  the value 25.  
     
 -   Java methods work in largely the same way. General format of a Java method call:
@@ -56,25 +60,31 @@ A  **function**  is a reusable portion of a program, sometimes called a  _proced
       _objectName_._methodName_(_argumentList_)  // for instance methods
     
 -   Example. There is a pre-defined Math class method called  _sqrt_, which takes one input value (of type  double) and returns its square root. Sample calls:
-    
-      double x = 9.0, y = 16.0, z;
-    
-      z = Math.sqrt(36.0);	    // sqrt returns 6.0 (gets stored in z)
-      z = Math.sqrt(x);         // sqrt returns 3.0 (gets stored in z)
-      z = Math.sqrt(x + y);	    // sqrt returns 5.0 (gets stored in z) 
-    
-      System.out.print(Math.sqrt(100.0));  // sqrt returns 10.0, which gets printed
-    
-      System.out.print(Math.sqrt(49));   // because of automatic type conversion rules
-    			             //  we can send an int where a double is expected
+
+```java
+double x = 9.0, y = 16.0, z;
+
+z = Math.sqrt(36.0);	    // sqrt returns 6.0 (gets stored in z)
+z = Math.sqrt(x);         // sqrt returns 3.0 (gets stored in z)
+z = Math.sqrt(x + y);	    // sqrt returns 5.0 (gets stored in z) 
+
+System.out.print(Math.sqrt(100.0));  // sqrt returns 10.0, which gets printed
+
+System.out.print(Math.sqrt(49));   // because of automatic type conversion rules
+
+//  we can send an int where a double is expected
                                          //  this call returns 7.0
     
       // in this last one, Math.sqrt(625.0) returns 25.0, which gets sent as the
       //  argument to the outer sqrt call.  This one returns 5.0, which gets
       //  printed
-    
-      System.out.print( Math.sqrt(Math.sqrt(625.0) ) );	
-    
+```
+
+
+```java
+System.out.print( Math.sqrt(Math.sqrt(625.0) ) );	
+```
+
     [Try this code here](https://www.cs.fsu.edu/~myers/cgs3416/notes/examples/methods/Sqrt1.java)  
     
 -   Note: If a method is a member of the same class from which it is called from, there is no need for a dot-operator on the call. Many of the examples below will ilustrate this
